@@ -18,7 +18,6 @@ public class Main {
 
         Collections.sort(studentList);
         System.out.println(studentList);
-        System.out.println("Hello-World");
 
     }
 }
