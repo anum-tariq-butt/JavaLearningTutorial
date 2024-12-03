@@ -10,10 +10,7 @@ public class Student implements Comparable<Student>{
     }
 
 
-    @Override
-    public int compareTo(Student other) {
-        return this.id - other.id; // Sort by ID in ascending order
-    }
+
 
     @Override
     public String toString() {
@@ -23,4 +20,8 @@ public class Student implements Comparable<Student>{
                 '}';
     }
 
+    @Override
+    public int compareTo(Student other) {
+        return this.name.compareTo(other.name);
+    }
 }
