@@ -2,39 +2,39 @@ package org.example.Java8Feature;
 
 import java.util.Objects;
 
-public class Student implements Comparable<Student>{
-    int id;
-    String name;
+public class Student{
+    //int id;
+    private String name;
+    private String year;
 
-    public Student(int id, String name){
+
+    public Student(String name, String Year){
         this.name = name;
-        this.id = id;
+        //this.id = id;
+        this.year = Year;
     }
 
+    public String getName() {
+        return name;
+    }
 
-    @Override
-    public int compareTo(Student other) {
-        return this.name.compareTo(other.name);
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
+                ", year='" + year + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return id == student.id && Objects.equals(name, student.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
     }
 }
